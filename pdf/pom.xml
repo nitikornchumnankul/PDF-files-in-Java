@@ -70,6 +70,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<repository>nitikorn/generate-pdf</repository>
+					<tag>${project.version}</tag>
+					<buildArgs>
+					  <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				  </configuration>
 			</plugin>
 		</plugins>
 	</build>
